@@ -1,0 +1,54 @@
+/* GameBoard.css */
+
+/* Main container for the game */
+.game-board {
+    position: relative;
+    width: 600px;       /* Adjust as needed */
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* The lanes where notes fall */
+  .lane {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 600px;      /* Matches the filter in your code (note.position < 600) */
+    margin: 0 10px;
+    border: 2px solid #888;
+    background-color: #222; /* A dark background for contrast */
+    box-sizing: border-box;
+    vertical-align: top;
+  }
+  
+  /* Label for each lane (A, S, D, F) */
+  .lane p {
+    color: #fff;
+    margin: 10px 0;
+    font-size: 1.2rem;
+  }
+  
+
+  /* Feedback text for HIT and MISS messages */
+  .feedback {
+    position: absolute;
+    top: 20px;          /* near the top of the container */
+    left: 50%;          /* centered horizontally */
+    transform: translateX(-50%);
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px #000;
+    pointer-events: none; /* so it doesn't block clicks/interaction */
+    transition: opacity 0.5s ease;
+  }
+  
+  /* Give different colors to HIT vs MISS */
+  .feedback.hit {
+    color: limegreen;
+  }
+  
+  .feedback.miss {
+    color: red;
+  }
+  
+  
